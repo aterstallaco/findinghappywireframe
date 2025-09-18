@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Happy – Working Draft Wireframe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            color: #252f3e;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+        }
+        .text-accent { color: #A3B18A; }
+        .bg-accent { background-color: #A3B18A; }
+        .btn-blue {
+            background-image: linear-gradient(to bottom right, #4a69bd, #3559a2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-blue:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-outline {
+            border: 2px solid #252f3e;
+            color: #252f3e;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-outline:hover {
+            transform: translateY(-2px) scale(1.02);
+            border-color: #4a69bd;
+            color: #4a69bd;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Donate Button -->
+    <header class="sticky top-0 bg-[#f0f0f0] py-4 px-8 z-50 flex justify-between items-center transition-all duration-300 shadow-md">
+        <h1 class="text-2xl font-bold">
+            <img src="logohappy.png" alt="Finding Happy" class="h-8">
+        </h1>
+        <a href="#donate" class="btn-blue text-white font-bold py-2 px-6 rounded-full shadow-lg transition-transform hover:scale-105">Donate</a>
+    </header>
+
+    <main class="w-full">
+        <!-- Hero Section -->
+        <section id="hero" class="relative h-screen flex flex-col justify-center text-left p-8 bg-[url('happy.png')] bg-cover bg-center bg-no-repeat">
+            <div class="relative z-10 space-y-6 max-w-2xl">
+                <div class="flex items-center space-x-4">
+                    <!-- Simple bird SVG for visual resonance -->
+                    <svg class="w-12 h-12 text-[#252f3e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" transform="rotate(-45 12 12)" />
+                    </svg>
+                    <h2 class="text-5xl md:text-7xl font-bold tracking-tighter text-[#252f3e] drop-shadow-2xl">Finding Happy</h2>
+                </div>
+                <p class="text-xl md:text-2xl text-accent font-semibold">Looping Video or Poster Image Background</br>with button for trailer</p>
+                <a href="#trailer" class="btn-blue text-white font-bold text-lg py-4 px-10 rounded-full shadow-2xl transition-transform hover:scale-105 inline-block">Play Trailer</a>
+            </div>
+        </section>
+
+        <!-- Event Section -->
+        <section id="event" class="py-16 px-8 bg-accent text-white">
+            <div class="max-w-4xl mx-auto text-center space-y-4">
+                <h3 class="text-4xl md:text-5xl font-bold">Finding Happy X </br>Random Acts of Kindness Worldwide Event</h3>
+                <p class="text-lg">Join us in proving that even the smallest act of kindness can spark something extraordinary. Include date and relevant info – Link will be to an events page which also connects to RAKW2026.com</p>
+                <a href="#" class="btn-blue text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform hover:scale-105">Learn More & Join In</a>
+            </div>
+        </section>
+
+        <!-- Synopsis -->
+        <section id="synopsis" class="py-24 px-8 max-w-5xl mx-auto space-y-8">
+            <h3 class="text-4xl font-bold text-accent text-center">Synopsis (could be a more themed heading or no heading at all)</h3>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-[#d1d8e0] p-8 rounded-xl shadow-xl space-y-4">
+                    <p class="text-lg">Include the brief synopsis here</p>
+                    <p class="text-lg">As her life unravels, a woman saves an injured baby sparrow, forming a
+profound bond that sparks a worldwide journey to explore the healing
+
+power of kindness and human-animal connections. </p>
+                </div>
+                <div class="w-full h-80 rounded-xl bg-gray-300 shadow-xl flex items-center justify-center text-gray-500">
+                    <span class="text-lg">FILM STILL / VISUALS / Perhaps looping video if not in hero section</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Laurels & Testimonials -->
+        <section id="testimonials" class="py-24 px-8 bg-[#d1d8e0] text-[#252f3e]">
+            <div class="max-w-6xl mx-auto text-center space-y-12">
+                <h3 class="text-4xl font-bold text-accent">Laurels & Testimonials</h3>
+                <!-- Laurels Placeholder -->
+                <div class="flex flex-wrap justify-center items-center gap-6">
+                    <div class="w-24 h-24 bg-[#b0b8c4] rounded-full flex items-center justify-center text-xs text-[#252f3e] uppercase">Laurel</div>
+                    <div class="w-24 h-24 bg-[#b0b8c4] rounded-full flex items-center justify-center text-xs text-[#252f3e] uppercase">Award</div>
+                    <div class="w-24 h-24 bg-[#b0b8c4] rounded-full flex items-center justify-center text-xs text-[#252f3e] uppercase">Official Selection</div>
+                    <div class="w-24 h-24 bg-[#b0b8c4] rounded-full flex items-center justify-center text-xs text-[#252f3e] uppercase">Winner</div>
+                </div>
+                <!-- Testimonials Carousel Placeholder -->
+                <div class="mt-12 space-y-6">
+                    <p class="text-2xl font-light italic max-w-3xl mx-auto">&ldquo; Example quote - A powerful and moving story that will resonate with audiences long after the credits roll. A beautiful masterpiece.&rdquo;</p>
+                    <p class="text-accent font-semibold">- The Daily Review</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filmmakers & Participants -->
+        <section id="crew" class="py-24 px-8 max-w-5xl mx-auto space-y-12 text-center">
+            <h3 class="text-4xl font-bold text-accent">Filmmakers & Participants</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gray-300 flex items-center justify-center text-gray-500 text-xs">Photo</div>
+                    <h4 class="text-xl font-bold">MARIA BERTRAND</br> Director</h4>
+                    <p class="text-sm text-gray-600">One line bio, click to read more</p>
+                </div>
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gray-300 flex items-center justify-center text-gray-500 text-xs">Photo</div>
+                    <h4 class="text-xl font-bold">KELLY KING</br>Producer</h4>
+                    <p class="text-sm text-gray-600"> One line bio, click to read more </p>
+                </div>
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gray-300 flex items-center justify-center text-gray-500 text-xs">Photo</div>
+                    <h4 class="text-xl font-bold">Placeholder</h4>
+                    <p class="text-sm text-gray-600">Decision as to whether to include others on this section via the long scroll or make it more polished and just the link to find out more about all.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community & Connection -->
+        <section id="community" class="py-24 px-8 bg-[#d1d8e0]">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <h3 class="text-4xl font-bold text-accent">Join Our Flock</h3>
+                <p class="text-lg max-w-3xl mx-auto"> Connect with a growing community of people who believe in the power of happiness and kindness.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://instagram.com" target="_blank" class="btn-blue text-white font-bold py-3 px-8 rounded-full">Join Us on Instagram</a>
+                    <a href="#" class="btn-outline font-bold py-3 px-8 rounded-full">Sign up for Newsletter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Where to Watch & Screenings -->
+        <section id="screenings" class="py-24 px-8 max-w-5xl mx-auto space-y-12">
+            <h3 class="text-4xl font-bold text-accent text-center">Where to Watch & Screenings</h3>
+            <div class="bg-[#d1d8e0] p-8 rounded-xl shadow-xl space-y-6">
+                <p class="text-lg font-semibold text-center">Streaming Now on: <span class="text-blue">this would be for later</span></p>
+                <div class="space-y-4">
+                    <h4 class="text-2xl font-semibold">Upcoming Screenings:</h4>
+                    <ul class="space-y-2">
+                        <li><strong class="text-accent">Date, City, State:</strong> Theater / Festival Name</li>
+                        <li><strong class="text-accent">Date, City, State:</strong> Theater / Festival Name</li>
+                        <li><strong class="text-accent">Date, City, State:</strong> Theater / Festival Name</li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <a href="#" class="btn-outline font-bold py-3 px-8 rounded-full">Host a Screening</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact & Educational Toolkit -->
+        <section id="impact" class="py-24 px-8 bg-[#d1d8e0]">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <h3 class="text-4xl font-bold text-accent">The Impact & Educational Toolkit</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+                    <div class="text-left">
+                        <p class="text-lg">Discover the film's purpose beyond the screen. We offer resources for students, teachers, and community leaders to facilitate powerful discussions and inspire positive change.</p>
+                    </div>
+                    <div class="flex justify-start sm:justify-end">
+                        <a href="#" class="btn-blue text-white font-bold py-3 px-8 rounded-full">Explore the Toolkit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Press -->
+        <section id="news" class="py-24 px-8 max-w-5xl mx-auto space-y-12 text-center">
+            <h3 class="text-4xl font-bold text-accent">News & Press</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <h4 class="text-xl font-bold">News Article Headline</h4>
+                    <p class="text-sm text-gray-600">A brief snippet of a recent news article or update.</p>
+                    <a href="#" class="text-accent hover:underline">Read More</a>
+                </div>
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <h4 class="text-xl font-bold">Film Festival Update</h4>
+                    <p class="text-sm text-gray-600">Details on a new festival selection or award win.</p>
+                    <a href="#" class="text-accent hover:underline">Read More</a>
+                </div>
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <h4 class="text-xl font-bold">Listen to the Director and Producer on the XYZ Podcast</h4>
+                    <p class="text-sm text-gray-600">Maria Bertrand and Kelly King discuss the making of 'Finding Happy' and the power of kindness in this exclusive interview.</p>
+                    <a href="#" class="text-accent hover:underline">Listen Here</a>
+                </div>
+                <div class="bg-[#d1d8e0] p-6 rounded-xl shadow-xl space-y-4">
+                    <div class="w-full h-48 bg-gray-300 rounded-xl flex items-center justify-center text-gray-500">
+                        <span class="text-lg">Placeholder Image</span>
+                    </div>
+                    <h4 class="text-xl font-bold">Interview with the Director and Producer of Finding Happy.</h4>
+                    <p class="text-sm text-gray-600">A link to a recent interview or panel discussion.</p>
+                    <a href="#" class="text-accent hover:underline">Read More</a>
+                </div>
+            </div>
+            <a href="#" class="btn-blue text-white font-bold py-3 px-8 rounded-full mt-8">Download Press Kit</a>
+        </section>
+
+        <!-- Store -->
+        <section id="store" class="py-24 px-8 bg-[#d1d8e0] text-center">
+            <h3 class="text-4xl font-bold text-accent mb-12">Store</h3>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-200 rounded-xl p-4 space-y-4 shadow-xl">
+                    <div class="w-full h-48 bg-gray-300 rounded-xl flex items-center justify-center text-gray-500">Product Image</div>
+                    <h4 class="font-semibold text-lg">Official T-shirt</h4>
+                    <p>$</p>
+                </div>
+                <div class="bg-gray-200 rounded-xl p-4 space-y-4 shadow-xl">
+                    <div class="w-full h-48 bg-gray-300 rounded-xl flex items-center justify-center text-gray-500">Product Image</div>
+                    <h4 class="font-semibold text-lg">Finding Happy Hat</h4>
+                    <p>$</p>
+                </div>
+                <div class="bg-gray-200 rounded-xl p-4 space-y-4 shadow-xl">
+                    <div class="w-full h-48 bg-gray-300 rounded-xl flex items-center justify-center text-gray-500">Product Image</div>
+                    <h4 class="font-semibold text-lg">Contribute to Rescue Org</h4>
+                    <p>$</p>
+                </div>
+                <div class="bg-gray-200 rounded-xl p-4 space-y-4 shadow-xl">
+                    <div class="w-full h-48 bg-gray-300 rounded-xl flex items-center justify-center text-gray-500">Product Image</div>
+                    <h4 class="font-semibold text-lg">Other Merch</h4>
+                    <p>$</p>
+                </div>
+            </div>
+            <a href="#" class="btn-blue text-white font-bold py-3 px-8 rounded-full mt-12 inline-block">Visit the Store</a>
+        </section>
+
+        <!-- Sponsors & Partners -->
+        <section id="sponsors" class="py-16 px-8 max-w-5xl mx-auto text-center space-y-8">
+            <h3 class="text-2xl md:text-3xl font-bold text-accent">Sponsors & Partners</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="w-32 h-16 bg-[#d1d8e0] rounded-xl flex items-center justify-center text-xs text-gray-500">Logo</div>
+                <div class="w-32 h-16 bg-[#d1d8e0] rounded-xl flex items-center justify-center text-xs text-gray-500">Logo</div>
+                <div class="w-32 h-16 bg-[#d1d8e0] rounded-xl flex items-center justify-center text-xs text-gray-500">Logo</div>
+                <div class="w-32 h-16 bg-[#d1d8e0] rounded-xl flex items-center justify-center text-xs text-gray-500">Logo</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="py-16 px-8 bg-[#3b4b5e] text-white text-center">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Newsletter -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-xl text-accent">Join Our Newsletter</h4>
+                    <form class="flex flex-col space-y-4">
+                        <input type="email" placeholder="Your email address" class="w-full p-3 rounded-lg bg-[#252f3e] text-white border border-gray-700 focus:outline-none focus:border-accent">
+                        <button type="submit" class="btn-blue text-white font-bold py-3 px-6 rounded-lg">Subscribe</button>
+                    </form>
+                </div>
+                <!-- Contact & Social -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-xl text-accent">Contact & Social</h4>
+                    <p>info@findinghappy.com</p>
+                    <div class="flex justify-center gap-4 text-2xl">
+                        <a href="#" class="hover:text-accent transition-colors">X</a>
+                        <a href="#" class="hover:text-accent transition-colors">Instagram</a>
+                        <a href="#" class="hover:text-accent transition-colors">Facebook</a>
+                    </div>
+                </div>
+                <!-- Legal -->
+                <div class="space-y-4">
+                   
+                </div>
+            </div>
+            <p class="mt-12 text-sm text-gray-400">&copy; 2025 Finding Happy. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
