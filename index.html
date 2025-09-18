@@ -36,6 +36,13 @@
             border-color: #4a69bd;
             color: #4a69bd;
         }
+        .nav-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        .nav-menu.is-open {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -43,10 +50,37 @@
     <!-- Header & Donate Button -->
     <header class="sticky top-0 bg-[#f0f0f0] py-4 px-8 z-50 flex justify-between items-center transition-all duration-300 shadow-md">
         <h1 class="text-2xl font-bold">
-            <img src="logohappy.png" alt="Finding Happy" class="h-8">
+            <img src="logohappy.png" alt="Finding Happy" class="w-32">
         </h1>
-        <a href="#donate" class="btn-blue text-white font-bold py-2 px-6 rounded-full shadow-lg transition-transform hover:scale-105">Donate</a>
+        <div class="flex items-center space-x-4">
+            <a href="#donate" class="btn-blue text-white font-bold py-2 px-6 rounded-full shadow-lg transition-transform hover:scale-105">Donate</a>
+            <!-- Hamburger Menu Button -->
+            <button id="menu-button" class="text-[#252f3e] focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
     </header>
+
+    <!-- Navigation Menu (Hidden by default) -->
+    <nav id="full-menu" class="nav-menu fixed top-0 right-0 w-full h-full bg-[#f0f0f0] p-8 z-40 flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu" class="absolute top-8 right-8 text-[#252f3e] focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <a href="#event" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Event</a>
+        <a href="#synopsis" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Synopsis</a>
+        <a href="#film-visuals" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Visuals</a>
+        <a href="#testimonials" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Laurels</a>
+        <a href="#crew" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Filmmakers</a>
+        <a href="#community" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Community</a>
+        <a href="#screenings" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Screenings</a>
+        <a href="#impact" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Toolkit</a>
+        <a href="#news" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">News</a>
+        <a href="#store" class="text-4xl font-bold text-[#252f3e] hover:text-accent transition-colors">Store</a>
+    </nav>
 
     <main class="w-full">
         <!-- Hero Section -->
@@ -270,5 +304,28 @@
         </footer>
     </main>
 
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-menu');
+        const fullMenu = document.getElementById('full-menu');
+        const menuLinks = fullMenu.querySelectorAll('a');
+
+        menuButton.addEventListener('click', () => {
+            fullMenu.classList.add('is-open');
+        });
+
+        closeButton.addEventListener('click', () => {
+            fullMenu.classList.remove('is-open');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                fullMenu.classList.remove('is-open');
+            });
+        });
+    </script>
+
 </body>
 </html>
+
+
